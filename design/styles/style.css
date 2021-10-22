@@ -1,0 +1,202 @@
+/* write your code here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+body {
+  background-color: #155a9b;
+  overflow-x: hidden;
+}
+/* navbar */
+.max-width {
+  padding: 0 120px;
+  margin: auto;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background-color: #f1c21b;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: #f1c21b;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: #155a9b;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: #f1c21b;
+}
+.navbar.sticky .menu li a:hover {
+  color: #155a9b;
+}
+
+.home {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.home h1 {
+  margin-top: 25vh;
+  font-family: "Montez", cursive;
+  font-size: 40px;
+  font-weight: 200;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+}
+.home p {
+  margin-top: 40px;
+  font-family: "Montez", cursive;
+  font-size: 55px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+}
+.home h3 {
+  margin-top: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 68px;
+  font-weight: bold;
+  color: #f1c21b;
+  text-shadow: 2px 2px white;
+}
+.home img {
+  position: absolute;
+  z-index: 3;
+  float: right;
+  size: cover;
+  height: 700px;
+  margin-left: 100vh;
+  top: 150px;
+  right: -10px;
+}
+
+.home a {
+  position: absolute;
+  z-index: 1;
+  float: left;
+  padding: 12px 36px;
+  margin-top: 15px;
+  border-radius: 6px;
+  top: 65%;
+  left: 10px;
+}
+
+.home svg {
+  top: 50px;
+  left: 600px;
+  width: 70%;
+  position: absolute;
+  z-index: 2;
+}
+
+/* about */
+.about {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/alex-shutin-kKvQJ6rK6S4-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.about h1 {
+  margin-top: 250px;
+  font-family: "Montez", cursive;
+  letter-spacing: 1px;
+  font-size: 75px;
+  font-weight: bolder;
+  color: #f1c21b;
+  text-shadow: 2px 2px white;
+}
+.about p {
+  margin-top: 40px;
+  width: 650px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  line-height: 1.5em;
+}
+#product {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+#map {
+  margin-top: 50px;
+  height: 500px;
+  width: 100%;
+}
+
+#product .title {
+  margin-top: 120px;
+  font-family: "Montez", cursive;
+  letter-spacing: 1px;
+  font-size: 75px;
+  font-weight: bolder;
+  color: #f1c21b;
+  text-shadow: 2px 2px white;
+}
+.title {
+  margin-top: 120px;
+  font-family: "Montez", cursive;
+  letter-spacing: 1px;
+  font-size: 75px;
+  font-weight: bolder;
+  color: #f1c21b;
+  text-shadow: 2px 2px white;
+}
+
+.welcome {
+  margin-top: 150px;
+  font-family: "Montez", cursive;
+  letter-spacing: 1px;
+  font-size: 75px;
+  font-weight: bolder;
+  color: #f1c21b;
+  text-shadow: 2px 2px white;
+}

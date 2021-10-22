@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <title>Zenith</title>
+</head>
+
+<body>
+  <div class="login container">
+    <h1 class="mb-5">Edit Product</h1>
+    <form action="/products/<%= sessionData.id %>/edit/<%= data.dataProduct.id %>" method="post">
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input name="productName" type="productName" class="form-control" id="productName"
+          value="<%= data.dataProduct.productName %>">
+      </div>
+      <div class="mb-3">
+        <label for="imageUrl" class="form-label">Photos Product (URL)</label>
+        <input name="imageUrl" type="imageUrl" class="form-control" id="imageUrl"
+          value="<%= data.dataProduct.imageUrl %>">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" type="description" class="form-control" id="description" value=""
+          placeholder="e.g Ukuran L, bahan..."><%= data.dataProduct.description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input name="price" type="number" class="form-control" id="price" value="<%= data.dataProduct.price %>">
+      </div>
+      <div class="mb-3">
+        <label for="stock" class="form-label">Stock</label>
+        <input name="stock" type="number" class="form-control" id="stock" value="<%= data.dataProduct.stock %>">
+      </div>
+      <div class="mb-3">
+        <label for="CategoryId" class="form-label">Category</label>
+        <select name="CategoryId" class="form-control">
+          <% data.dataCategory.forEach((each)=> { %>
+            <option value="<%= each.id %>">
+              <%= each.name %>
+            </option>
+            <% }) %>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="/scripts/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDow26c7qmhoolIzEXkW9DRtPCaW7HrmQM&callback=initMap&libraries=places&v=weekly"
+    async></script>
+</body>
+
+</html>
