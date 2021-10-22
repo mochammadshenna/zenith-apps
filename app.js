@@ -6,7 +6,7 @@ const session = require("express-session");
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/helper"));
+app.use(express.static(__dirname + "/design"));
 
 app.use(
     session({
